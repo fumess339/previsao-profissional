@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão Pessoal de Futuro Profissional | IA para Carreira</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#10b981',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.03);
+        }
+        .animated-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .animated-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #10b981;
+            transition: width 0.3s ease;
+        }
+        .animated-underline:hover::after {
+            width: 100%;
+        }
+        .feature-card:hover .feature-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+        .feature-icon {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-robot text-3xl text-primary mr-2"></i>
+                    <h1 class="text-2xl font-bold">
+                        <span class="text-primary">Previsão</span>
+                        <span class="text-secondary">Profissional</span>
+                    </h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="animated-underline font-medium">Início</a>
+                    <a href="#how-it-works" class="animated-underline font-medium">Como Funciona</a>
+                    <a href="#benefits" class="animated-underline font-medium">Benefícios</a>
+                    <a href="#courses" class="animated-underline font-medium">Cursos</a>
+                    <a href="#contact" class="animated-underline font-medium">Contato</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                    <button class="px-4 py-2 rounded-full border border-primary text-primary font-medium hover:bg-primary hover:text-white transition">
+                        Login
+                    </button>
+                    <button class="px-4 py-2 rounded-full gradient-bg text-white font-medium hover:opacity-90 transition">
+                        Comece Agora
+                    </button>
+                    <button class="md:hidden text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Seu futuro profissional desvendado por IA</h2>
+                    <p class="text-xl mb-8 opacity-90">Nossa inteligência artificial analisa seu perfil, o mercado de trabalho e tendências para traçar o caminho ideal para sua carreira.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="px-8 py-4 bg-accent hover:bg-opacity-90 rounded-full text-white font-bold text-lg transition hover-scale">
+                            Envie seu Currículo <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <button class="px-8 py-4 bg-white hover:bg-opacity-90 rounded-full text-primary font-bold text-lg transition hover-scale">
+                            Veja Demonstração
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-lg">
+                        <div class="absolute -top-10 -left-10 w-64 h-64 bg-white bg-opacity-10 rounded-full filter blur-3xl"></div>
+                        <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-accent bg-opacity-20 rounded-full filter blur-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1616587894289-86480e533129?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="IA analisando carreira" 
+                             class="relative rounded-2xl shadow-2xl border-8 border-white hover-scale">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-gray-50 py-8">
+        <div class="container mx-auto px-4">
+    
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Como nossa IA transforma sua carreira</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Um processo simples e poderoso para desvendar as melhores oportunidades para seu futuro</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">1. Envie seus dados</h3>
+                    <p class="text-gray-600">Faça upload do seu currículo ou conecte-se ao LinkedIn para análise automática.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">2. Análise de IA</h3>
+                    <p class="text-gray-600">Nossa inteligência artificial avalia suas habilidades, experiências e tendências do mercado.</p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">3. Cruzamento de dados</h3>
+                    <p class="text-gray-600">Comparamos seu perfil com milhares de vagas e dados de mercado em tempo real.</p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="feature-card bg-gray-50 p-8 rounded-xl hover:shadow-lg transition">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white text-2xl mb-6">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">4. Recomendações</h3>
+                    <p class="text-gray-600">Receba um plano personalizado com carreiras promissoras, cursos e habilidades em alta.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <button class="px-8 py-4 gradient-bg hover:opacity-90 rounded-full text-white font-bold text-lg transition hover-scale">
+                    Experimente Agora Grátis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Vantagens Exclusivas</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Por que milhares de profissionais confiam em nossa plataforma</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Direcionamento preciso</h3>
+                    <p class="text-gray-600">Saiba exatamente quais habilidades desenvolver e quais caminhos seguir para alcançar seus objetivos profissionais.</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center text-secondary text-2xl mb-6">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Economize tempo</h3>
+                    <p class="text-gray-600">Evite cursos e especializações desnecessárias. Invista seu tempo no que realmente importa para sua carreira.</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-accent bg-opacity-10 rounded-full flex items-center justify-center text-accent text-2xl mb-6">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Dados em tempo real</h3>
+                    <p class="text-gray-600">Nossa IA monitora constantemente o mercado para manter suas recomendações sempre atualizadas.</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-primary bg-opacity-10 rounded-full flex items-center justify-center text-primary text-2xl mb-6">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cursos recomendados</h3>
+                    <p class="text-gray-600">Acesse uma curadoria dos melhores cursos das principais plataformas de educação para suas necessidades.</p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-secondary bg-opacity-10 rounded-full flex items-center justify-center text-secondary text-2xl mb-6">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Oportunidades de emprego</h3>
+                    <p class="text-gray-600">Receba recomendações de vagas alinhadas com seu perfil e com as tendências do mercado.</p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition hover-scale">
+                    <div class="w-14 h-14 bg-accent bg-opacity-10 rounded-full flex items-center justify-center text-accent text-2xl mb-6">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Roteiro de carreira</h3>
+                    <p class="text-gray-600">Visualize um plano claro com metas e etapas para alcançar seus objetivos profissionais em 1, 3 e 5 anos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Histórias de Sucesso</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veja como nossa plataforma transformou carreiras</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Ana Silva" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Ana Silva</h4>
+                            <p class="text-gray-500">Engenheira de Software</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Graças às recomendações da plataforma, descobri que deveria me especializar em IA. Em 6 meses consegui uma promoção com 40% de aumento salarial!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos Mendes" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Carlos Mendes</h4>
+                            <p class="text-gray-500">Gerente de Marketing</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"A análise mostrou que precisava desenvolver habilidades em análise de dados. Fiz os cursos recomendados e hoje lidero uma nova área na empresa."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Juliana Costa" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold">Juliana Costa</h4>
+                            <p class="text-gray-500">Designer UX/UI</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Estava perdida na carreira até usar a plataforma. As recomendações me direcionaram para UX Research, área que nem sabia que existia e que amo trabalhar!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses -->
+    <section id="courses" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Cursos Recomendados</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Parcerias com as melhores plataformas de educação</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition hover-scale">
+                    <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" 
+                         alt="Curso Data Science" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-semibold px-2 py-1 bg-primary bg-opacity-10 text-primary rounded">Data Science</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Data Science para Negócios</h3>
+                        <p class="text-gray-600 mb-4">Aprenda a aplicar análise de dados para tomada de decisões estratégicas.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Coursera-Logo_600x600.svg/1200px-Coursera-Logo_600x600.svg.png" 
+                                     alt="Coursera" 
+                                     class="h-6">
+                            </div>
+                            <button class="text-primary font-medium hover:underline">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition hover-scale">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Curso UX Design" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-semibold px-2 py-1 bg-secondary bg-opacity-10 text-secondary rounded">UX Design</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Design Thinking e UX Avançado</h3>
+                        <p class="text-gray-600 mb-4">Domine as melhores técnicas de pesquisa e prototipagem para criar experiências incríveis.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Udemy_logo.svg/2560px-Udemy_logo.svg.png" 
+                                     alt="Udemy" 
+                                     class="h-6">
+                            </div>
+                            <button class="text-primary font-medium hover:underline">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition hover-scale">
+                    <img src="https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Curso Inteligência Artificial" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="text-xs font-semibold px-2 py-1 bg-accent bg-opacity-10 text-accent rounded">IA Generativa</span>
+                            </div>
+                            <div class="flex items-center text-yellow-400 text-sm">
+                                <i class="fas fa-star"></i>
+                                <span class="ml-1 text-gray-600">4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Domine ChatGPT e IA Generativa</h3>
+                        <p class="text-gray-600 mb-4">Aprenda a utilizar as ferramentas mais avançadas de IA para aumentar sua produtividade.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <img src="https://www.alura.com.br/assets/img/home/alura-logo.1570550707.svg" 
+                                     alt="Alura" 
+                                     class="h-6">
+                            </div>
+                            <button class="text-primary font-medium hover:underline">Ver Curso</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <button class="px-8 py-4 gradient-bg hover:opacity-90 rounded-full text-white font-bold text-lg transition hover-scale">
+                    Ver Todos os Cursos Recomendados
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para transformar sua carreira?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Nossa IA analisará seu perfil e mostrará as melhores oportunidades para seu futuro profissional.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button class="px-8 py-4 bg-white hover:bg-opacity-90 rounded-full text-primary font-bold text-lg transition hover-scale">
+                    Envie seu Currículo
+                </button>
+                <button class="px-8 py-4 border-2 border-white hover:bg-white hover:bg-opacity-10 rounded-full font-bold text-lg transition hover-scale">
+                    Conectar com LinkedIn
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Tire suas dúvidas sobre nossa plataforma</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <h3 class="text-xl font-bold">Como a IA faz as recomendações de carreira?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Nossa IA analisa seu currículo ou perfil do LinkedIn, cruzando essas informações com milhões de dados de mercado, incluindo vagas de emprego, tendências de contratação, relatórios salariais e crescimento de setores. O algoritmo identifica padrões e oportunidades alinhadas com suas habilidades e experiências.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <h3 class="text-xl font-bold">Meus dados estão seguros?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Sim, utilizamos criptografia de ponta a ponta e seguimos rigorosos protocolos de segurança. Seus dados nunca serão compartilhados com terceiros sem sua autorização explícita. Você pode solicitar a exclusão de seus dados a qualquer momento.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <h3 class="text-xl font-bold">Quanto custa o serviço?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Oferecemos uma análise básica gratuita. Para acessar recomendações detalhadas, plano de carreira personalizado e monitoramento contínuo do mercado, temos planos a partir de R$29,90/mês. Você pode cancelar a qualquer momento.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <h3 class="text-xl font-bold">Posso atualizar minhas informações depois?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Sim! Recomendamos que você atualize seu perfil sempre que adquirir novas habilidades, concluir cursos ou mudar de emprego. Assim, nossas recomendações se manterão sempre alinhadas com seu desenvolvimento profissional.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6">
+                    <button class="faq-question flex justify-between items-center w-full text-left">
+                        <h3 class="text-xl font-bold">Como entro em contato com o suporte?</h3>
+                        <i class="fas fa-chevron-down text-primary transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 text-gray-600 hidden">
+                        <p>Nosso time de suporte está disponível por e-mail (suporte@previsaoprofissional.com), chat dentro da plataforma e telefone (11 1234-5678) de segunda a sexta, das 9h às 18h. Respondemos a maioria das solicitações em até 24 horas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm p-8 md:p-12">
+                <h2 class="text-3xl font-bold mb-6">Fale Conosco</h2>
+                <form>
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                        <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                        <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="px-8 py-4 gradient-bg hover:opacity-90 rounded-full text-white font-bold text-lg transition hover-scale">
+                        Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-3xl text-primary mr-2"></i>
+                        <h3 class="text-2xl font-bold">
+                            <span class="text-primary">Previsão</span>
+                            <span class="text-secondary">Profissional</span>
+                        </h3>
+                    </div>
+                    <p class="text-gray-400">Utilizando inteligência artificial para desvendar o futuro da sua carreira.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Início</a></li>
+                        <li><a href="#how-it-works" class="text-gray-400 hover:text-white transition">Como Funciona</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition">Benefícios</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition">Cursos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Recursos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Guia de Carreiras</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Relatórios de Mercado</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Parceiros</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Assine para receber dicas de carreira e atualizações.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-3 rounded-l-lg w-full text-dark">
+                        <button class="px-4 py-3 bg-primary hover:bg-opacity-90 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Previsão Profissional. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle (would need additional implementation)
+        const mobileMenuButton = document.querySelector('button:has(.fa-bars)');
+        mobileMenuButton.addEventListener('click', () => {
+            // Implement mobile menu toggle logic here
+            console.log('Mobile menu clicked');
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=guisousa/previs-o-profissional" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
