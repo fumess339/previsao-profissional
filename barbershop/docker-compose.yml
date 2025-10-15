@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  barbershop-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    container_name: barbershop-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

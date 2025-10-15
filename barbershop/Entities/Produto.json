@@ -1,0 +1,46 @@
+{
+  "name": "Produto",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição do produto"
+    },
+    "preco": {
+      "type": "number",
+      "description": "Preço do produto"
+    },
+    "estoque": {
+      "type": "number",
+      "description": "Quantidade em estoque"
+    },
+    "imagem_url": {
+      "type": "string",
+      "description": "URL da imagem do produto"
+    },
+    "categoria": {
+      "type": "string",
+      "enum": [
+        "pomada",
+        "cera",
+        "shampoo",
+        "oleo",
+        "navalha",
+        "outros"
+      ],
+      "description": "Categoria do produto"
+    },
+    "ativo": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "nome",
+    "preco"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Servico",
+  "type": "object",
+  "properties": {
+    "nome": {
+      "type": "string",
+      "description": "Nome do serviço"
+    },
+    "descricao": {
+      "type": "string",
+      "description": "Descrição do serviço"
+    },
+    "preco": {
+      "type": "number",
+      "description": "Preço do serviço"
+    },
+    "duracao": {
+      "type": "number",
+      "description": "Duração em minutos"
+    },
+    "ativo": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "nome",
+    "preco",
+    "duracao"
+  ]
+}
